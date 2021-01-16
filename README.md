@@ -1,2 +1,1 @@
-# TODO
-react-redux todos
+# TODO 📝
