@@ -72,5 +72,21 @@
     "eslint-plugin-react": "^7.22.0",
     "prettier": "^2.2.1",
     "prettier-quick": "^0.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/braswelljr/todo.git"
+  },
+  "keywords": [
+    "Node",
+    "react",
+    "react-router",
+    "redux",
+    "tailwindcss"
+  ],
+  "author": "braswelljr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/braswelljr/todo/issues"
   }
 }
