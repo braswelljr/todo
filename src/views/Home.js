@@ -1,12 +1,12 @@
 import React from "react";
+import AllTodos from "../components/allTodos";
 
-const Home = ({ appname }) => {
+const Home = () => {
   return (
-    <div className="bg-primary">
-      <header className="container px-5 py-2">
-        <h3 className="text-white text-uppercase">{appname}</h3>
-      </header>
-      <main className=""></main>
+    <div className="w-full h-full">
+      <main className="w-full h-full px-4 sm:px-8 md:px-20 lg:px-32">
+        <AllTodos />
+      </main>
     </div>
   );
 };

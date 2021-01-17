@@ -1,11 +1,19 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 import router from "./router/index";
+import Navbar from "./components/Navbar";
 
-const App = () => {
-  const appname = `todo`;
+const App = ({ appname }) => {
+  // set or create storage for todos
+  if (typeof Storage !== "undefined") {
+    localStorage.getItem(appname) === null
+      ? localStorage.setItem(appname, JSON.stringify([]))
+      : localStorage.getItem(appname);
+  }
+
   return (
-    <div className="App">
+    <div className="w-full min-h-screen bg-trueGray-100 text-trueGray-700">
+      <Navbar appname={appname} />
       <Switch>
         {router.map((route, index) => (
           <Route

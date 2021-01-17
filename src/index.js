@@ -8,11 +8,13 @@ import { BrowserRouter } from "react-router-dom";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 
+export const appname = `todos`;
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
-        <TodoApp />
+        <TodoApp appname={appname} />
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,

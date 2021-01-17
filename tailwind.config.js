@@ -1,3 +1,5 @@
+const color = require("tailwindcss/colors");
+
 module.exports = {
   purge: {
     mode: "all",
@@ -13,10 +15,18 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        trueGray: color.trueGray,
+        warmGray: color.warmGray,
+        blueGray: color.blueGray
+      }
+    }
   },
   variants: {
-    extend: {}
+    extend: {
+      translate: ["group-hover"]
+    }
   },
   plugins: []
 };
