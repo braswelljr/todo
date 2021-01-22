@@ -1,6 +1,13 @@
-import React from "react";
+import { useState } from "react";
 
 const createTodo = ({ create, showCreate }) => {
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
+
   return (
     <div className="z-10 flex items-center justify-center w-full h-screen bg-trueGray-700 center">
       <button
@@ -23,16 +30,37 @@ const createTodo = ({ create, showCreate }) => {
       </button>
       <form
         action="#"
+        onSubmit={handleSubmit}
         method="post"
-        className="px-4 bg-white shadow md:px-12 lg:px-20 top-14"
+        className="flex items-center justify-center w-full px-4 mx-4 text-white shadow h-1/2 sm:mx-24 md:px-12 lg:px-20"
       >
         <div className="">
-          <label htmlFor="title"></label>
-          <input type="text" name="title" id="title" />
-        </div>
-        <div className="">
-          <label htmlFor="content"></label>
-          <input type="text" name="content" id="content" />
+          <div className="">
+            <label htmlFor="title">title</label>
+            <input
+              type="text"
+              name="title"
+              onChange={e => setTitle(e.target.value)}
+              value={title}
+              id="title"
+            />
+          </div>
+          <div className="">
+            <label htmlFor="content">content</label>
+            <input
+              type="text"
+              name="content"
+              onChange={e => setContent(e.target.value)}
+              value={content}
+              id="content"
+            />
+          </div>
+          <button
+            type="submit"
+            className="px-2 py-1 font-medium lowercase border border-current"
+          >
+            Create Todo
+          </button>
         </div>
       </form>
     </div>

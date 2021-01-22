@@ -1,12 +1,10 @@
 import React from "react";
-import AllTodos from "../components/allTodos";
+import Todos from "../components/Todos";
 
 const Home = () => {
   return (
-    <div className="w-full h-full">
-      <main className="w-full h-full px-4 sm:px-8 md:px-20 lg:px-32">
-        <AllTodos />
-      </main>
+    <div className="w-full h-screen bg-yellow-500">
+      <Todos />
     </div>
   );
 };
