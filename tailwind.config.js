@@ -25,8 +25,11 @@ module.exports = {
   },
   variants: {
     extend: {
+      borderColor: ["first", "last", "odd", "even"],
+      borderStyle: ["first", "last", "odd", "even"],
+      borderWidth: ["first", "last", "odd", "even"],
       translate: ["group-hover"]
     }
   },
-  plugins: []
+  plugins: [require("@tailwindcss/aspect-ratio")]
 };

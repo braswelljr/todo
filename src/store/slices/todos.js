@@ -5,12 +5,12 @@ export const Todos = createSlice({
   name: `todos`,
   initialState: JSON.parse(localStorage.getItem(`todos`)),
   reducers: {
-    alltodos: state => state.map(todo => todo),
-    markAllDone: state => state.map(todo => (todo.done = true)),
-    markAllUndone: state => state.map(todo => (todo.done = false)),
-    deleteAllTodos: state => state == [],
+    alltodos: state => void state.map(todo => todo),
+    markAllDone: state => void state.map(todo => (todo.done = true)),
+    markAllUndone: state => void state.map(todo => (todo.done = false)),
+    deleteAllTodos: state => void (state == []),
     create: (state, action) =>
-      state.push({
+      void state.push({
         id: uuidv4(),
         title: action.payload.title,
         content: action.payload.content,
@@ -27,11 +27,11 @@ export const Todos = createSlice({
       }
     },
     toggleComplete: (state, action) => {
-      const { id, isComplete } = action.payload;
-      const index = state.find(todo => todo.id === id);
+      const { payload } = action;
+      const index = state.find(todo => todo.id == payload.id);
 
       if (index) {
-        index.isComplete = !isComplete;
+        index.isComplete = !index.isComplete;
       }
     },
     deleteTodo: (state, action) => {
@@ -55,7 +55,5 @@ export const {
   deleteTodo,
   toggleComplete
 } = Todos.actions;
-
-export const todos = state => state.todos;
 
 export default Todos.reducer;
