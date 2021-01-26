@@ -51,7 +51,7 @@ const Todos = () => {
           <div className="px-5 sm:px-14 md:px-28 lg:px-40">
             {todos.map(todo => (
               <div
-                className="flex items-center justify-between px-4 py-1 text-base font-normal border border-t-0 border-l-0 border-r-0 border-trueGray-800 text-trueGray-800"
+                className="flex items-center justify-between px-4 py-1 text-base font-normal border border-t-0 border-l-0 border-r-0 translate-x-44 last:border-b-0 border-trueGray-800 text-trueGray-800"
                 key={todo.id}
               >
                 <div className="text-lg font-medium capitalize">
@@ -66,7 +66,7 @@ const Todos = () => {
                     {todo.isComplete ? (
                       <svg
                         className={`w-auto h-5 p-0 overflow-auto transition-all duration-300 ease-in-out transform ${
-                          todo.isComplete ? `-translate-x-44` : `translate-x-0`
+                          todo.isComplete ? `-translate-y-0` : `translate-y-0`
                         }`}
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -81,7 +81,7 @@ const Todos = () => {
                     ) : (
                       <svg
                         className={`w-auto h-5 p-0 overflow-auto transition-all duration-300 ease-in-out transform ${
-                          todo.isComplete ? `translate-x-44` : `translate-x-0`
+                          todo.isComplete ? `-translate-y-0.5` : `translate-y-0`
                         }`}
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"

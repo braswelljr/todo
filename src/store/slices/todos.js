@@ -28,7 +28,7 @@ export const Todos = createSlice({
     },
     toggleComplete: (state, action) => {
       const { payload } = action;
-      const index = state.find(todo => todo.id == payload.id);
+      const index = state.find(todo => todo.id == payload);
 
       if (index) {
         index.isComplete = !index.isComplete;

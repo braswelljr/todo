@@ -20,6 +20,19 @@ module.exports = {
         trueGray: color.trueGray,
         warmGray: color.warmGray,
         blueGray: color.blueGray
+      },
+      animation: {
+        stagger: "stagger 1s ease-in forwards"
+      },
+      keyframes: {
+        stagger: {
+          from: {
+            transform: "translateX(100%)"
+          },
+          to: {
+            transform: "translateX(0)"
+          }
+        }
       }
     }
   },
