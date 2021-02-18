@@ -188,7 +188,7 @@ const Todos = () => {
         } inset-0 w-full h-full opacity-25 bg-trueGray-800 focus:outline-none`}
       ></button>
       <div
-        className={`fixed flex items-center inset-y-0 left-0 w-10/12 h-full overflow-auto transition-all duration-300 ease-in-out transform bg-trueGray-800 md:w-2/3 lg:w-1/2 text-yellow-300 ${
+        className={`fixed flex items-center rounded-t-3xl md:rounded-t-none inset-x-0 md:inset bottom-0 h-4/5 md:inset-y-0 md:left-0 w-full md:h-full overflow-auto transition-all duration-300 ease-in-out transform bg-trueGray-800 md:w-2/3 lg:w-1/2 text-yellow-300 ${
           create ? `translate-x-0` : `-translate-x-full`
         }`}
       >
